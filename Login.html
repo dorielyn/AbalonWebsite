@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 40px;
+            margin: 20px;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .error {
+            color: #e74c3c;
+            text-align: center;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+
+        footer {
+            background-color: rgb(75, 65, 58);
+            color: white;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="login()" id="loginBtn">Login</button>
+        <p class="error" id="errorMessage"></p>
+    </div>
+
+    <script>
+        let cooldownActive = false;
+        
+        function login() {
+            if (cooldownActive) return;
+
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let errorMessage = document.getElementById("errorMessage");
+            let loginBtn = document.getElementById("loginBtn");
+
+            let validUsername = "Admin123";
+            let validPassword = "Admin123";
+
+            if (username === validUsername && password === validPassword) {
+                window.location.href = "Home.html";
+            } else {
+                errorMessage.textContent = "Invalid username or password. Please wait 10 seconds.";
+                loginBtn.disabled = true;
+                cooldownActive = true;
+
+                setTimeout(() => {
+                    errorMessage.textContent = "";
+                    loginBtn.disabled = false;
+                    cooldownActive = false;
+                }, 10000);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(menu.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            color: rgb(15, 14, 14);
+        }
+
+        .menu {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu h2 {
+            color: rgb(26, 24, 24);
+            margin-bottom: 20px;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu li {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .menu ul ul {
+            margin-top: 5px;
+            padding-left: 20px;
+        }
+
+        .menu ul ul li {
+            font-size: 16px;
+            font-weight: normal;
+        }
+
+        /* Hover effect on list items */
+        .menu li:hover {
+            color: #2980b9;
+            cursor: pointer;
+        }
+
+        /* Style for the button */
+        button {
+            padding: 10px 20px;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+
+<section class="menu">
+    <h2><a href="LD2.html" style="color: rgb(26, 24, 24); text-decoration: none;">Menu</a></h2>
+    <ul>
+        <li>Coffee
+            <ul>
+                <li>Espresso</li>
+                <li>Brew Coffee</li>
+                <li>Cold Brew</li>
+                <li>Ice Coffee</li>
+            </ul>
+        </li>
+        <li>Tea
+            <ul>
+                <li>Black Tea</li>
+                <li>Green Tea</li>
+                <li>Herbal Tea</li>
+            </ul>
+        </li>
+        <li>Pastries
+            <ul>
+                <li>Muffins</li>
+                <li>Cookies</li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- Back to Home button -->
+    <div style="text-align: center; margin-top: 30px;">
+        <button onclick="window.location.href='home.html';">Back to Home</button>
+    </div>
+</section>
+
+</body>
+</html>

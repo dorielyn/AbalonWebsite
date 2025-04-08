@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #a34141;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .content {
+            background: rgba(56, 28, 4, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: rgb(238, 182, 182);
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #3498db;
+        }
+
+    </style>
+</head>
+
+<body style="background-image: url(brew.jpg); background-size: cover; background-position: center;">
+    <div class="content" style="text-align: center; color: white; padding: 50px;">
+        
+        <h1><a href="LD2.html" style="color: white; text-decoration: none;"><b>Home</b></a></h1>
+
+        <h2>Welcome to Brews & Bites</h2>
+        <p>Your one-stop destination for coffee, tea, and pastries. Explore our menu for your favorite brews and bites!</p>
+    </div>
+
+    <!-- Back Button linking to the login page -->
+    <button onclick="goBack()">Back</button>
+
+    <script>
+        function goBack() {
+            window.location.href = "login.html"; // Redirect to the login page (replace 'login.html' with your login page's filename)
+        }
+    </script>
+
+</body>
+</html>
